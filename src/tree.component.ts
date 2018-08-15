@@ -78,6 +78,8 @@ export class TreeComponent implements OnInit, OnChanges, OnDestroy {
   }
 
   public ngOnInit(): void {
+    console.log('TREE - INIT - TEST');
+
     this.subscriptions.push(
       this.treeService.nodeRemoved$.subscribe((e: NodeEvent) => {
         this.nodeRemoved.emit(e);
